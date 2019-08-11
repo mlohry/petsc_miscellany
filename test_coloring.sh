@@ -1,7 +1,7 @@
 #!/bin/bash
 
 np=16
-executable=./petsc_coloring_from_file
+executable=../petsc_coloring_from_file
 filename=./jacobian_sparsity.dat
 
 declare -a colortypes=("sl" "lf" "jp" "id" "greedy")
