@@ -9,6 +9,6 @@ declare -a colortypes=("sl" "lf" "jp" "id" "greedy")
 for color in "${colortypes[@]}"
 do
     echo "color type: ${color}"
-    output=`time mpiexec -np ${np} ${executable} -f ${filename} -mat_coloring_type ${color} -mat_coloring_view`
-    echo ${output} | grep real
+    command="time mpiexec -np ${np} ${executable} -f ${filename} -mat_coloring_type ${color} -mat_coloring_view"
+    eval $command    
 done
